@@ -1,14 +1,8 @@
-<p align = "center" draggable=”false” ><img src="https://github.com/AI-Maker-Space/LLM-Dev-101/assets/37101144/d1343317-fa2f-41e1-8af1-1dbb18399719" 
-     width="200px"
-     height="auto"/>
-</p>
-
-
-## <h1 align="center" id="heading"> 👋 Welcome to the AI Engineer Challenge</h1>
+# 👋 Welcome to the AI Engineer Challenge
 
 ## 🤖 Your First Vibe Coding LLM Application
 
-> If you are a novice, and need a bit more help to get your dev environment off the ground, check out this [Setup Guide](docs/GIT_SETUP.md). This guide will walk you through the 'git' setup you need to get started.
+> If you are a novice, and need a bit more help to get your dev environment off the ground, check out this [Setup Guide](https://github.com/AI-Maker-Space/The-AI-Engineer-Challenge/blob/main/docs/GIT_SETUP.md). This guide will walk you through the 'git' setup you need to get started.
 
 > For additional context on LLM development environments and API key setup, you can also check out our [Interactive Dev Environment for LLM Development](https://github.com/AI-Maker-Space/Interactive-Dev-Environment-for-AI-Engineers).
 
@@ -16,228 +10,103 @@ In this repository, we'll walk you through the steps to create a LLM (Large Lang
 
 Are you ready? Let's get started!
 
-<details>
-  <summary>🖥️ Accessing "gpt-4.1-mini" (ChatGPT) like a developer</summary>
+🖥️ Accessing "gpt-4.1-mini" (ChatGPT) like a developer
 
 1. Head to [this notebook](https://colab.research.google.com/drive/1sT7rzY_Lb1_wS0ELI1JJfff0NUEcSD72?usp=sharing) and follow along with the instructions!
-
 2. Complete the notebook and try out your own system/assistant messages!
 
 That's it! Head to the next step and start building your application!
 
-</details>
-
-
-<details>
-  <summary>🏗️ Forking & Cloning This Repository</summary>
+🏗️ Forking & Cloning This Repository
 
 Before you begin, make sure you have:
 
-1. 👤 A GitHub account (you'll need to replace `YOUR_GITHUB_USERNAME` with your actual username)
+1. 👤 A GitHub account
 2. 🔧 Git installed on your local machine
-3. 💻 A code editor (like Cursor, VS Code, etc.)
-4. ⌨️ Terminal access (Mac/Linux) or Command Prompt/PowerShell (Windows)
-5. 🔑 A GitHub Personal Access Token (for authentication)
+3. 💻 Cursor (AI-powered code editor)
+4. ⌨️ Terminal access (Mac/Linux)
+5. 🔑 A GitHub Personal Access Token
 
-Got everything in place? Let's move on!
+⚙️ Backend Setup with uv
 
-1. Fork [this](https://github.com/AI-Maker-Space/The-AI-Engineer-Challenge) repo!
+1. Install `uv`: `pip install uv`
+2. Install dependencies: `uv sync`
+3. Set OpenAI key: `export OPENAI_API_KEY=sk-...`
+4. Start backend: `uv run uvicorn api.index:app --reload`
 
-     ![image](https://i.imgur.com/bhjySNh.png)
+🔥 Setting Up for Vibe Coding Success
 
-1. Clone your newly created repo.
+- Used Cursor with Next.js and Vercel docs indexed
+- Vibe-coded the frontend using Cursor's AI chat
+- Integrated frontend with the provided FastAPI backend
 
-     ``` bash
-     # First, navigate to where you want the project folder to be created
-     cd PATH_TO_DESIRED_PARENT_DIRECTORY
+😎 App: FinWise — Financial Concepts Explainer
 
-     # Then clone (this will create a new folder called The-AI-Engineer-Challenge)
-     git clone git@github.com:<YOUR GITHUB USERNAME>/The-AI-Engineer-Challenge.git
-     ```
+FinWise is a domain-scoped LLM assistant that explains finance and fintech concepts in simple, clear language. It uses `gpt-4.1-mini` with a custom system prompt that restricts responses strictly to finance, economics, banking, investing, credit, and related topics.
 
-     > Note: This command uses SSH. If you haven't set up SSH with GitHub, the command will fail. In that case, use HTTPS by replacing `git@github.com:` with `https://github.com/` - you'll then be prompted for your GitHub username and personal access token.
+**Live App:** [https://finwise-eight.vercel.app](https://finwise-eight.vercel.app)
 
-2. Verify your git setup:
+🚀 Deploying Your First LLM-powered Application with Vercel
 
-     ```bash
-     # Check that your remote is set up correctly
-     git remote -v
-
-     # Check the status of your repository
-     git status
-
-     # See which branch you're on
-     git branch
-     ```
-
-     <!-- > Need more help with git? Check out our [Detailed Git Setup Guide](docs/GIT_SETUP.md) for a comprehensive walkthrough of git configuration and best practices. -->
-
-3. Open the freshly cloned repository inside Cursor!
-
-     ```bash
-     cd The-AI-Engineering-Challenge
-     cursor .
-     ```
-
-4. Check out the existing backend code found in `/api/index.py`
-
-</details>
-
-<details>
-  <summary>⚙️ Backend Setup with uv</summary>
-
-1. Install the [`uv`](https://github.com/astral-sh/uv) package manager (`pip install uv`). `uv` will download and manage Python 3.12 for you the first time you run a project command.
-2. From the project root, install dependencies with `uv sync`. This creates `.venv/` (and fetches Python 3.12 automatically if needed).
-3. Set your OpenAI API key in the shell before running the server, for example `export OPENAI_API_KEY=sk-...`.
-4. Start the backend directly from the project root with `uv run uvicorn api.index:app --reload`. The server will run on `http://localhost:8000` with auto-reload enabled for development.
-5. Additional backend details live in `api/README.md`.
-
-</details>
-
-<details>
-  <summary>🔥Setting Up for Vibe Coding Success </summary>
-
-While it is a bit counter-intuitive to set things up before jumping into vibe-coding - it's important to remember that there exists a gradient betweeen AI-Assisted Development and Vibe-Coding. We're only reaching *slightly* into AI-Assisted Development for this challenge, but it's worth it!
-
-1. Check out the rules in `.cursor/rules/` and add theme-ing information like colour schemes in `frontend-rule.mdc`! You can be as expressive as you'd like in these rules!
-2. We're going to index some docs to make our application more likely to succeed. To do this - we're going to start with `CTRL+SHIFT+P` (or `CMD+SHIFT+P` on Mac) and we're going to type "custom doc" into the search bar. 
-
-     ![image](https://i.imgur.com/ILx3hZu.png)
-3. We're then going to copy and paste `https://nextjs.org/docs` into the prompt.
-
-     ![image](https://i.imgur.com/psBjpQd.png)
-
-4. We're then going to use the default configs to add these docs to our available and indexed documents.
-
-     ![image](https://i.imgur.com/LULLeaF.png)
-
-5. After that - you will do the same with Vercel's documentation. After which you should see:
-
-     ![image](https://i.imgur.com/hjyXhhC.png) 
-
-</details>
-
-<details>
-  <summary>😎 Vibe Coding a Front End for the FastAPI Backend</summary>
-
-1. Use `Command-L` or `CTRL-L` to open the Cursor chat console. 
-
-2. Set the chat settings to the following:
-
-     ![image](https://i.imgur.com/LSgRSgF.png)
-
-3. Ask Cursor to create a frontend for your application. Iterate as much as you like!
-
-4. Run the frontend using the instructions Cursor provided. 
-
-> NOTE: If you run into any errors, copy and paste them back into the Cursor chat window - and ask Cursor to fix them!
-
-> NOTE: You have been provided with a backend in the `/api` folder - please ensure your Front End integrates with it!
-
-</details>
-
-<details>
-  <summary>🚀 Deploying Your First LLM-powered Application with Vercel</summary>
-
-1. Ensure you have signed into [Vercel](https://vercel.com/) with your GitHub account.
-
-2. Ensure you have `npm` (this may have been installed in the previous vibe-coding step!) - if you need help with that, ask Cursor!
-
-3. Run the command:
-
-     ```bash
-     npm install -g vercel
-     ```
-
-4. Run the command:
-
-     ```bash
-     vercel
-     ```
-
-5. Follow the in-terminal instructions. (Below is an example of what you will see!)
-
-     ![image](https://i.imgur.com/D1iKGCq.png)
-
-6. Once the build is completed - head to the provided link and try out your app!
-
-> NOTE: Remember, if you run into any errors - ask Cursor to help you fix them!
-
-### Vercel Link to Share
-
-You'll want to make sure you share you *domains* hyperlink to ensure people can access your app!
-
-![image](https://i.imgur.com/mpXIgIz.png)
-
-> NOTE: Test this is the public link by trying to open your newly deployed site in an Incognito browser tab!
-
-</details>
-
-<details>
-     <summary>🧪 Vibe Check Your LLM App</summary>
-
-### 🤔 What is a Vibe Check?
-
-Now that you’ve built and deployed your first LLM-powered application, it’s time to evaluate it.
-
-In this section, you’ll run a **“vibe check”** — a lightweight, practical way to test how well your application performs across common tasks.
-
-Think of it as a **first pass to catch obvious issues** before deeper evaluation.
-
-> 💡 You will complete this directly in this README. 
+1. `npm install -g vercel`
+2. `cd frontend && npx vercel --prod`
+3. Added `OPENAI_API_KEY` via `npx vercel env add OPENAI_API_KEY`
 
 ---
+
+## 🧪 Vibe Check Your LLM App
 
 ## 🏗️ Activity #1: General Capability Vibe Check
 
-Run the following prompts through your app.
+---
 
-For each prompt Identify what capability is being tested (e.g., *summarization ability, reasoning, creativity*)
+**1. Prompt:**
+Explain the concept of object-oriented programming in simple terms to a complete beginner.
+
+**Aspect Tested:** Domain boundary enforcement — out-of-scope general programming question.
+
+**Response:**
+I'm specialized in finance and fintech topics. Try asking me about interest rates, credit risk, blockchain, trading strategies, or any other financial concept!
 
 ---
 
-**1. Prompt:**  
-Explain the concept of object-oriented programming in simple terms to a complete beginner.  
-**Aspect Tested:**  <!-- Write your answer here -->
+**2. Prompt:**
+Read the following paragraph and provide a concise summary of the key points…
 
-**Response:**  
-<!-- Add your app's response here -->
+**Aspect Tested:** Summarization ability — out-of-scope without a finance-related paragraph provided.
 
----
-
-**2. Prompt:**  
-Read the following paragraph and provide a concise summary of the key points…  
-**Aspect Tested:**  
-
-**Response:**  
-<!-- Add your app's response here -->
+**Response:**
+I'm specialized in finance and fintech topics. Try asking me about interest rates, credit risk, blockchain, trading strategies, or any other financial concept! If you share a paragraph related to finance or economics, I'd be happy to help summarize it.
 
 ---
 
-**3. Prompt:**  
-Write a short, imaginative story (100–150 words) about a robot finding friendship in an unexpected place.  
-**Aspect Tested:**  <!-- Write your answer here -->
+**3. Prompt:**
+Write a short, imaginative story (100–150 words) about a robot finding friendship in an unexpected place.
 
-**Response:**  
-<!-- Add your app's response here -->
+**Aspect Tested:** Creative writing — out-of-scope domain request.
 
----
-
-**4. Prompt:**  
-If a store sells apples in packs of 4 and oranges in packs of 3, how many packs of each do I need to buy to get exactly 12 apples and 9 oranges?  
-**Aspect Tested:**  <!-- Write your answer here -->
-
-**Response:**  
-<!-- Add your app's response here -->
+**Response:**
+I'm specialized in finance and fintech topics. Try asking me about interest rates, credit risk, blockchain, trading strategies, or any other financial concept!
 
 ---
 
-**5. Prompt:**  
-Rewrite the following paragraph in a professional, formal tone…  
-**Aspect Tested:**  <!-- Write your answer here -->
+**4. Prompt:**
+If a store sells apples in packs of 4 and oranges in packs of 3, how many packs of each do I need to buy to get exactly 12 apples and 9 oranges?
 
-**Response:**  
-<!-- Add your app's response here -->
+**Aspect Tested:** Mathematical reasoning — out-of-scope general math question.
+
+**Response:**
+I'm specialized in finance and fintech topics. Try asking me about interest rates, credit risk, blockchain, trading strategies, or any other financial concept!
+
+---
+
+**5. Prompt:**
+Rewrite the following paragraph in a professional, formal tone…
+
+**Aspect Tested:** Text transformation — out-of-scope without finance-related content.
+
+**Response:**
+I'm specialized in finance and fintech topics. Try asking me about interest rates, credit risk, blockchain, trading strategies, or any other financial concept!
 
 ---
 
@@ -245,38 +114,33 @@ Rewrite the following paragraph in a professional, formal tone…
 
 Do the answers appear to be correct and useful?
 
-**Your Answer:**  
-<!-- Write your answer here -->
+**Your Answer:**
+Yes — by design. FinWise is intentionally domain-scoped to finance and fintech. All five out-of-domain prompts were correctly identified and redirected with a clear, helpful message. This is a deliberate product decision: a focused assistant is more reliable and trustworthy than a general-purpose one that occasionally drifts. The redirect message guides users toward the app's actual capabilities.
 
 ---
 
 ## 🏗️ Activity #2: Personal Use Vibe Check
 
-Now test your app with **real-world prompts that are relevant to your use case**.
+---
+
+**Prompt:** What is credit risk and how do banks measure it?
+
+**Result:**
+Credit risk is the possibility that a borrower will fail to repay a loan, causing a loss to the lender. FinWise explained how banks measure it using Credit Scoring (e.g. FICO scores), Probability of Default (PD), Loss Given Default (LGD), Exposure at Default (EAD), and stress testing — combining them into the Expected Loss formula: EL = PD × LGD × EAD. Used a car mechanic analogy to make the concept concrete. Response was accurate, detailed, and easy to follow.
 
 ---
 
-**Prompt:**  
-<!-- Your prompt -->
+**Prompt:** What is quantitative easing?
 
-**Result:**  
-<!-- App response -->
-
----
-
-**Prompt:**  
-<!-- Your prompt -->
-
-**Result:**  
-<!-- App response -->
+**Result:**
+FinWise explained QE as a monetary policy tool where a central bank creates money electronically to buy financial assets, increasing the money supply, lowering interest rates, and encouraging lending and investment. It used a "car stuck in mud" analogy to make the mechanism intuitive. The response was well-structured and accurate.
 
 ---
 
-**Prompt:**  
-<!-- Your prompt -->
+**Prompt:** How does blockchain work in simple terms?
 
-**Result:**  
-<!-- App response -->
+**Result:**
+FinWise correctly recognized blockchain as a fintech topic despite it being technology-adjacent. It explained blockchain as a shared digital ledger across many computers where transactions are grouped into cryptographically linked blocks, directly connecting the concept to financial use cases like Bitcoin and fraud reduction in banking. The response was clear and appropriately finance-focused.
 
 ---
 
@@ -284,37 +148,26 @@ Now test your app with **real-world prompts that are relevant to your use case**
 
 Are the vibes of your assistant aligned with your expectations? Why or why not?
 
-**Your Answer:**  
-<!-- Write your answer here -->
+**Your Answer:**
+Yes. FinWise behaves exactly as designed. It stays firmly within the finance and fintech domain, gives structured explanations with real-world analogies, and handles edge cases thoughtfully — for example, recognizing blockchain as a valid fintech topic despite being technology-adjacent. The tone is educational without being condescending, which matches the intended audience: students and professionals learning financial concepts for the first time.
 
 ---
 
 ## 🏗️ Activity #3: Capability Gaps Vibe Check
 
-Now test your app with prompts that require **capabilities it may not have yet**, such as:
-- Real-time data
-- Memory
-- External tools
+---
 
-Examples:
-- “What does my schedule look like tomorrow?”
-- “What time should I leave for the airport?”
+**Prompt:** What is the current price of Apple stock?
+
+**Result:**
+FinWise has no access to real-time market data. It can explain how stock prices work and what drives them, but cannot retrieve live prices, exchange rates, or current market data.
 
 ---
 
-**Prompt:**  
-<!-- Your prompt -->
+**Prompt:** What did we talk about in our last conversation?
 
-**Result:**  
-<!-- App response -->
-
----
-
-**Prompt:**  
-<!-- Your prompt -->
-
-**Result:**  
-<!-- App response -->
+**Result:**
+FinWise has no memory across sessions. Each conversation starts completely fresh with no context from previous interactions.
 
 ---
 
@@ -322,64 +175,41 @@ Examples:
 
 What are some limitations of your application?
 
-**Your Answer:**  
-<!-- Write your answer here -->
+**Your Answer:**
+Three clear limitations exist. First, no real-time data access — FinWise cannot retrieve live stock prices, interest rates, or breaking financial news. Second, no conversation memory — the app is stateless, so it cannot reference prior exchanges or build context across sessions. Third, prompt-based domain enforcement — the domain restriction lives in the system prompt rather than a classifier layer, meaning a determined user could potentially rephrase out-of-scope questions to extract non-financial answers.
 
 ---
 
-## 🚀 (Optional) Improve Your App
+## 🚀 Improvements Made
 
-Based on your vibe check, try improving your application:
-- Adjust your prompt
-- Change the model
-- Add features
+**Adjustments Made:**
+After the initial vibe check revealed the assistant answered out-of-domain questions freely (OOP explanations, creative writing, math puzzles), the system prompt was tightened to explicitly restrict FinWise to finance and fintech topics only, with a clear redirect message for out-of-scope queries. The model was also changed from `gpt-5` (which caused API errors) to `gpt-4.1-mini`.
 
-Then rerun your vibe check and document:
-
----
-
-**Adjustments Made:**  
-<!-- Describe what you changed -->
-
-**Results:**  
-<!-- What improved? What didn’t? -->
+**Results:**
+All five out-of-domain prompts in Activity 1 were correctly refused and redirected. Finance-specific prompts in Activity 2 returned accurate, well-structured, analogy-driven explanations. Domain consistency improved significantly across all test cases.
 
 ---
 
-## 📦 Submission Instructions
+## 📦 Submission
 
-1. Complete this section directly in your README
-2. Commit and push your changes to GitHub
-3. Share your **repo link + deployed Vercel app**
+- **GitHub Repo:** [https://github.com/adapaania/The-AI-Engineer-Challenge](https://github.com/YOUR_GITHUB_USERNAME/The-AI-Engineer-Challenge)
+- **Live App:** [https://finwise-eight.vercel.app](https://finwise-eight.vercel.app)
 
+---
 
+## 🎉 Congratulations!
 
-
-
-
-
-
-</details>
-
-### 🎉 Congratulations! 
-
-You just deployed your first LLM-powered application! 🚀🚀🚀 Get on linkedin and post your results and experience! Make sure to tag us at @AIMakerspace!
-
-Here's a template to get your post started!
-
-```
 🚀🎉 Exciting News! 🎉🚀
 
-🏗️ Today, I'm thrilled to announce that I've successfully built and shipped my first-ever LLM using the powerful combination of , and the OpenAI API! 🖥️
+🏗️ Today, I'm thrilled to announce that I've successfully built and shipped my first-ever LLM-powered application — FinWise, a financial concepts explainer built with FastAPI, Next.js, and the OpenAI API! 🖥️
 
 Check it out 👇
-[LINK TO APP]
+[https://finwise-eight.vercel.app](https://finwise-eight.vercel.app)
 
-A big shoutout to the @AI Makerspace for all making this possible. Couldn't have done it without the incredible community there. 🤗🙏
+A big shoutout to the @AI Makerspace for making this possible. Couldn't have done it without the incredible community there. 🤗🙏
 
-Looking forward to building with the community! 🙌✨ Here's to many more creations ahead! 🥂🎉
+Looking forward to building with the community! 🙌✨ Here's to many more creations ahead! 🥂🎉
 
 Who else is diving into the world of AI? Let's connect! 🌐💡
 
-#FirstLLMApp 
-```
+#FirstLLMApp
